@@ -73,24 +73,68 @@ const perguntas = [
   },
   // pergunta4
   {
-      enunciado: "Você chegou na sala onde realiza o ENEM, e iniciou a prova, como você vai resolver?",
+      enunciado: "Após o início da prova do ENEM, você pensou em resolver de qual jeito?",
       alternativas: [
   {
-          texto: "",
+          texto: "Vou começar a resolver em ordem, para não ficar muito confusa depois",
           afirmacao: 
           [
-            "o que acontece diante da escolha",
-            "",
+            "No começo tava indo bem, mas ficou parado em uma questão difíceis e não deu tempo de resolver todas as questões",
+            "Não deu tempo de resolver todas as questões e teve que chutar as últimas questões",
           ],
   },
   {
-          texto: "o que voce escolheu",
+          texto: "Vou olhar todas as questões e começar a resolver dos fáceis, e deixar as questões difíceis para depois",
           afirmacao: 
           [
-            "o que acontece diante da escolhaa",
-            "",
+            "Deu tempo de resolver as questões que conseguiu entender, porém as questões que não entendeu foi chutando",
+            "Conseguiu resolver todas as questões e deu para revisar algmas questões!",
           ],
   },
       ],
   },
 ];
+
+let atual = 0;
+let perguntaAtual;
+let historiaFinal = "";
+
+function mostraPergunta(){
+  if(atual>= perguntas.length){
+    mostraResultado();
+    return;
+  },
+  perguntaAtual = perguntas[atual];
+  caixaPerguntas.textContext = perguntaAtual.enunciado;
+  caixaAlternativas.textContext = "";
+  mostraAlternativas();
+},
+
+function mostraAlternativas(){
+  for (const alternativa of perguntaAtual.alternativas){
+    const botaoAlternativas = document.createElement("button");
+    botaoAlternativas.textContext = alternativa.texto;
+    botaoAlternativas.addEventListener("click",() => respostaSelecionada(alternativa));
+    caixaAlternativas.appendChild(botaoAlternativas);
+  },
+},
+
+function respostaSelecionada(opcaoSelecionada){
+  const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
+  historiaFinal += afirmacoes + " ";
+  atual++;
+  mostraPergunta();
+},
+
+function mostraResultado(){
+  caixaPerguntas.textContext = "O resultado do ENEM...";
+  textoResultado.textContext = historiaFinal;
+  caixaAlternativas.textContext = "";
+},
+
+function aleatorio(lista){
+  const posicao = Math.floor(Math.random()*lista.length);
+  return lista[posicao];
+}
+
+mostraPergunta();
