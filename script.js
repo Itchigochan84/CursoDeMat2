@@ -54,19 +54,19 @@ const perguntas = [
       enunciado: "Chegou a semana da prova, e os conteúdos são bem difíceis e para tirar uma nota exelente, precisará de tempo para estudar, e agora?",
       alternativas: [
   {
-          texto: "Vou preferir a estudar para o ENEM, porque se tiver o mínimo de nota para passar de ano está ótimo",
+          texto: "Vou continuar estudando para o ENEM, porque o ENEM é mais importante e se tiver o mínimo de nota para passar de ano está ótimo",
           afirmacao: 
           [
-            "o que acontece diante da escolha",
-            "",
+            "Você não teve nota vermelha, mas após as provas, percebe que esses conteúdos caem no ENEM",
+            "Depois que acabou todas as provas, percebeu que podia ter estudado na semana da prova, porque terá que estudar o conteúdo de mesma maneira",
           ],
   },
   {
-          texto: "o que voce escolheu",
+          texto: "Vou estudar bem e já dominar esses conteúdos para a prova, já que a nota da escola também é importante e já esuda para o ENEM",
           afirmacao: 
           [
-            "o que acontece diante da escolhaa",
-            "",
+            "Conseguiu tirar notas boas em todas as matérias, e também já mais um conhecimento para o ENEM",
+            "Após gabaritar todas as provas, você percebeu que tem possibilidades de entrada ao ensino superior com as notas da escola",
           ],
   },
       ],
