@@ -73,10 +73,10 @@ const perguntas = [
   },
   // pergunta4
   {
-      enunciado: "perguntas",
+      enunciado: "Você chegou na sala onde realiza o ENEM, e iniciou a prova, como você vai resolver?",
       alternativas: [
   {
-          texto: "o que voce escolhe",
+          texto: "",
           afirmacao: 
           [
             "o que acontece diante da escolha",
