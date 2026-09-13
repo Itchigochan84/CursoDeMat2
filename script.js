@@ -125,7 +125,7 @@ function mostraResultado() {
   textoResultado.textContent = historiaFinal;
   caixaAlternativas.textContent = "";
   caixaResultado.classlist.add("mostrar");
-  botaoJogarNovamente.addEventListener("click", jogarNovamente);
+  botaoJogarNovamente.addEventListener("click", jogarNovamente());
 }
 
 function aleatorio(lista) {
