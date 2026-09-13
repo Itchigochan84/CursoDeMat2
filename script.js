@@ -12,15 +12,15 @@ const perguntas = [
             { 
                 texto: "Vou estudar bem o que aprendeu na escola e realizar as tarefas", 
                 afirmacao: [ 
-                    "Você começou a tirar notas maravilhosas nas disciplinas e ganhou certificado", 
-                    "Você começou a sentir que está entendendo as aulas na escola" 
+                    "será uma nota mediana, pois, faltou um pouco de esforço para o estudo.", 
+                    "será uma nota baixa, portanto, o que você estudou não foi o suficiente para a prova do ENEM." 
                 ] 
             }, 
             { 
-                texto: "Além dos estudos para as provas, vou estudar nos sites e nas plataformas, ou seja, treinando as questões que já caiu no ENEM", 
+                texto: "Além dos estudos da escola, vou estudar nos sites e nas plataformas, ou seja, treinando as questões que já caiu no ENEM", 
                 afirmacao: [ 
-                    "No começo, sentiu a dificuldade de entender a questão do estilo ENEM, mas de pouco em pouco começou a conseguir melhor", 
-                    "A questão do estilo ENEM foi um assustador, mas continuou estudando porque terá o ENEM no final do ano" 
+                    "será uma nota alta, porque você estudou bem durante o ano.", 
+                    "será uma nota excelente! Porque você treinou bem as questões do estilo ENEM e estudou usando plataformas e pesquisando." 
                 ] 
             } 
         ] 
@@ -30,37 +30,37 @@ const perguntas = [
         enunciado: "Você aprendeu que a redação do estilo ENEM é dissertativo-argumentativo, como você estudará a redação?",
         alternativas: [
             {
-                texto: "Vou estudar bem a estrutura da redação e como escrever para tirar notas boas",
+                texto: "Vou estudar como é a estrutura e decorar como faz a redação",
                 afirmacao: [
-                    "Decorou totalmente como faz uma redação dissertativo-argumentativo e a estrutura",
-                    "Estudou como tem que escrever a redação e ficou contente que vai tirar notas boas na redação no ENEM"
+                    "Todavia, você não zerou, mas não foi muito bem na redação, porém, faltou treinar a redação para entender como faz na prática.",
+                    "E você teve dificuldade em escrever a redação, por causa que estudou somente a estrutura e não treinou."
                 ]
             },
             {
                 texto: "Além de estudar a estrutura, vou treinar a escrever a redação",
                 afirmacao: [
-                    "Treinou bastante como escreve, o que tem que escrever e a sua estrutura de redação",
-                    "Conseguiu decorar os repertórios, como obras para citar na redação e aprendeu a escrever a proposta de intervenção bem estruturada"
+                    "Além disso, você tirou nota 1000 na redação, pois, você treinou bem como escreve, uso de conectivos e repertórios.",
+                    "Ademais, você tirou uma nota muito boa na redação, entendeu bem sobre o tema e escreveu direitinho!"
                 ]
             }
         ]
     },
     // pergunta3
     {
-        enunciado: "Chegou a semana da prova, e os conteúdos são bem difíceis. Para tirar uma nota excelente, precisará de tempo para estudar. E agora?",
+        enunciado: "Hoje é um dia antes da prova do ENEM, vamos preparar como?",
         alternativas: [
             {
-                texto: "Vou continuar estudando para o ENEM, porque o ENEM é mais importante e se tiver o mínimo de nota para passar de ano está ótimo",
+                texto: "Estudar a noite inteira sem dormir para ter mais conhecimento e ficar bem preparado para a prova",
                 afirmacao: [
-                    "Você não teve nota vermelha, mas após as provas, percebe que esses conteúdos caem no ENEM",
-                    "Depois que acabaram todas as provas, percebeu que podia ter estudado na semana da prova, porque terá que estudar o conteúdo da mesma maneira"
+                    "No dia da prova, ficou com sono extremo durante a realização da prova e não conseguiu concentrar bem e não revisou direito a gabarito onde estava marcando.",
+                    "O cansaço e o sono afetou na prova, e esqueceu muita coisa na hora da prova e acabou marcando a alternativa errada."
                 ]
             },
             {
-                texto: "Vou estudar bem e já dominar esses conteúdos para a prova, já que a nota da escola também é importante e já estuda para o ENEM",
+                texto: "Preparar a bolsa, colocar coisas necessárias para o dia da prova, dormir bem e almoçar mais cedo",
                 afirmacao: [
-                    "Conseguiu tirar notas boas em todas as matérias, e também já tem mais um conhecimento para o ENEM",
-                    "Após gabaritar todas as provas, você percebeu que tem possibilidades de entrada ao ensino superior com as notas da escola"
+                    "No dia da prova, conseguiu concentrar bem durante a realização da prova e revisou bem qual alternativa está marcando.",
+                    "Como almoçou cedo, não ficou com sono e conseguiu concentrar até o final."
                 ]
             }
         ]
@@ -72,15 +72,15 @@ const perguntas = [
             {
                 texto: "Vou começar a resolver em ordem, para não ficar muito confusa depois",
                 afirmacao: [
-                    "No começo estava indo bem, mas ficou parado em uma questão difícil e não deu tempo de resolver todas as questões",
-                    "Não deu tempo de resolver todas as questões e teve que chutar as últimas questões"
+                    "E no fim, teve algumas questões não resolvidas e apenas foi um chute por não der tempo de resolver, por isso caiu um pouco a nota em geral.",
+                    "E a ansiedade e a preocupação de que demorou para resolver uma questão afetou no final, porque ficou com medo de não dar tempo e tentou resolver de qualquer maneira."
                 ]
             },
             {
                 texto: "Vou olhar todas as questões e começar a resolver as fáceis, e deixar as questões difíceis para depois",
                 afirmacao: [
-                    "Deu tempo de resolver as questões que conseguiu entender, porém as questões que não entendeu foi chutando",
-                    "Conseguiu resolver todas as questões e deu para revisar algumas questões!"
+                    "Por fim, era bom ter resolvido as questões fáceis, porque o estilo da correção do ENEM avalia a coerência nas questões objetivas.",
+                    "Conseguiu resolver todas as questões que sabia a resposta e deu para revisar várias questões, então a nota subiu."
                 ]
             }
         ]
@@ -120,7 +120,7 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function mostraResultado() {
-  caixaPerguntas.textContent = "O resultado do ENEM...";
+  caixaPerguntas.textContent = "O seu resultado do ENEM...";
   textoResultado.textContent = historiaFinal;
   caixaAlternativas.textContent = "";
 }
