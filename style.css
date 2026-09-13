@@ -46,3 +46,11 @@ body {
     color: #FFD1DC;
     margin-top: 20px;
 }
+
+.caixa-resultado{
+    display: none;
+}
+
+.caixa-resultado.mostrar{
+    display: block;
+}
