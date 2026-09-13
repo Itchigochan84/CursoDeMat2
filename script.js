@@ -124,7 +124,8 @@ function mostraResultado() {
   caixaPerguntas.textContent = "O seu resultado do ENEM...";
   textoResultado.textContent = historiaFinal;
   caixaAlternativas.textContent = "";
-  botaoJogarNovamente.addEventListener("click", jogarNovamente());
+  caixaResultado.classlist.add("mostrar");
+  botaoJogarNovamente.addEventListener("click", jogarNovamente);
 }
 
 function aleatorio(lista) {
@@ -135,6 +136,7 @@ function aleatorio(lista) {
 function jogaNovamente(){
         atual = 0;
         historiaFinal = "";
+        caixaResultado.classlist.remove("mostrar");
         mostraPergunta();
 }
 
